@@ -99,6 +99,8 @@ function khodamName() {
     khodam.innerHTML = khodamNames[khodamRandom];
     document.querySelector(".result").style.display = "block";
     document.getElementById("check-button").disabled = true;
+
+    // Clear input field
   }
 }
 
@@ -112,6 +114,10 @@ document.addEventListener("DOMContentLoaded", function () {
   nameInput.addEventListener("input", function () {
     // Enable button if name input changes
     document.getElementById("check-button").disabled = false;
+  });
+  nameInput.addEventListener("input", function () {
+    document.querySelector(".result").style.display = "none";
+    document.querySelector(".notification").style.display = "none";
   });
   checkButton.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
