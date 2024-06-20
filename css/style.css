@@ -151,6 +151,13 @@ a {
   font-family: "Playwrite ES", cursive;
 }
 @media screen and (max-width: 600px) {
+  body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
   .container {
     width: 90%;
   }
